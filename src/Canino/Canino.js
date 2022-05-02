@@ -1,4 +1,4 @@
-import { ContainerCanino, ContainerItem, CardItem} from "./styled"
+import { ContainerCanino, ContainerItem, CardItem, GhostFooter} from "./styled"
 
 export const Canino = () => {
     return(
@@ -29,6 +29,7 @@ export const Canino = () => {
             <CardItem>
                 <img src="https://static3.tcdn.com.br/img/img_prod/636855/coleira_peitoral_canil_xadrez_com_gravata_reforcado_caes_peq_10177_1_20200420114603.jpg"/>
             </CardItem>
+            <GhostFooter/>
             </ContainerItem>
         </ContainerCanino>
     )

@@ -1,6 +1,5 @@
-import React from "react"
-import { Header } from "../Header/Header"
-import { ContainerBody,Logo, ContainerButton, ButtonPet} from "./styled" 
+import React, { useState } from "react"
+import {Logo, ContainerButton, ButtonPet} from "./styled" 
 import {NavLink} from "react-router-dom"
 
 

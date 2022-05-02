@@ -11,7 +11,9 @@ export const ContainerItem = styled.div `
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 200px;
     
 
 `
@@ -24,6 +26,11 @@ export const CardItem = styled.div `
 
     img{
         width: 100%;
-        /* height: 150px; */
+       
     }
+`
+
+export const GhostFooter = styled.div `
+    width: 100%;
+    height: 110px;
 `

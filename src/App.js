@@ -2,41 +2,16 @@ import React from "react";
 import { BrowserRouter, Route, Switch }from "react-router-dom";
 import { Canino } from "./Canino/Canino";
 import { ErrorPage } from "./ErrorPage/ErrorPage";
-import { Felino } from "./Felino/Felino";
-import { Header } from "./Header/Header";
-import { Home } from "./Home/Home";
 import styled from "styled-components";
+import { Routes } from "./Config/routes";
 
 const ContainerBody = styled.div`
+   width: 100%;
    display: flex;
     flex-direction: column;
     height: 100vh;
-    width: 100%;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    height: 100vh;
 `
 
-function App() {
-  return (
-    <ContainerBody>
-    <BrowserRouter>
-      <Header/>
-      <Switch>
-        <Route exact path="/">
-          <Home />
-        </Route>
-        <Route exact path="/canino">
-          <Canino />
-        </Route>
-        <Route exact path="/felino">
-          <Felino />
-        </Route>
-        <Route>
-          <ErrorPage/>
-        </Route>
-      </Switch>
-    </BrowserRouter>
-    </ContainerBody>
-  );
-}
-
+const App =() =><ContainerBody><Routes/></ContainerBody>
 export default App;
