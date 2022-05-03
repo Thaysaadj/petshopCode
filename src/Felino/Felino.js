@@ -3,7 +3,7 @@ import { ContainerFelino, CardItem,ContainerItem, GhostFooter } from "./styled"
 export const Felino = () => {
     return(
         <ContainerFelino>
-        <h1>Items para Cães au au</h1>
+        <h1>Tudo para seu Felino</h1>
         <ContainerItem>
         <CardItem>
             <img src="https://static.petz.com.br/fotos/1467401093959.jpg"/>
@@ -15,37 +15,33 @@ export const Felino = () => {
             <img src="https://a-static.mlcdn.com.br/1500x1500/kit-mordedor-pet-10-brinquedos-de-vinil-para-caes-e-cachorro-jau-home-pet/jaupesca/kitpet10/436ebcd5bb682b81e781c0bb2191954c.jpg"/>
         </CardItem>
         <CardItem>
-            <img src="https://static3.tcdn.com.br/img/img_prod/636855/coleira_peitoral_canil_xadrez_com_gravata_reforcado_caes_peq_10177_1_20200420114603.jpg"/>
+            <img src="https://a-static.mlcdn.com.br/618x463/arranhador-para-gatos-com-torre-em-sisal-e-arco-marrom-pipo-pet/mandiali/11556/d8ef8da7a074926507a044adcfac692a.jpg"/>
         </CardItem>
         <CardItem>
-            <img src="https://static3.tcdn.com.br/img/img_prod/636855/coleira_peitoral_canil_xadrez_com_gravata_reforcado_caes_peq_10177_1_20200420114603.jpg"/>
+            <img src="https://a-static.mlcdn.com.br/618x463/arranhador-para-gatos-com-torre-em-sisal-e-arco-marrom-pipo-pet/mandiali/11556/d8ef8da7a074926507a044adcfac692a.jpg"/>
         </CardItem>
         <CardItem>
-            <img src="https://static3.tcdn.com.br/img/img_prod/636855/coleira_peitoral_canil_xadrez_com_gravata_reforcado_caes_peq_10177_1_20200420114603.jpg"/>
+            <img src="https://a-static.mlcdn.com.br/618x463/arranhador-para-gatos-com-torre-em-sisal-e-arco-marrom-pipo-pet/mandiali/11556/d8ef8da7a074926507a044adcfac692a.jpg"/>
         </CardItem>
         <CardItem>
-            <img src="https://static3.tcdn.com.br/img/img_prod/636855/coleira_peitoral_canil_xadrez_com_gravata_reforcado_caes_peq_10177_1_20200420114603.jpg"/>
+            <img src="https://a-static.mlcdn.com.br/618x463/arranhador-para-gatos-com-torre-em-sisal-e-arco-marrom-pipo-pet/mandiali/11556/d8ef8da7a074926507a044adcfac692a.jpg"/>
         </CardItem>
         <CardItem>
-            <img src="https://static3.tcdn.com.br/img/img_prod/636855/coleira_peitoral_canil_xadrez_com_gravata_reforcado_caes_peq_10177_1_20200420114603.jpg"/>
+            <img src="https://a-static.mlcdn.com.br/618x463/arranhador-para-gatos-com-torre-em-sisal-e-arco-marrom-pipo-pet/mandiali/11556/d8ef8da7a074926507a044adcfac692a.jpg"/>
         </CardItem>
         <CardItem>
-            <img src="https://static3.tcdn.com.br/img/img_prod/636855/coleira_peitoral_canil_xadrez_com_gravata_reforcado_caes_peq_10177_1_20200420114603.jpg"/>
+            <img src="https://a-static.mlcdn.com.br/618x463/arranhador-para-gatos-com-torre-em-sisal-e-arco-marrom-pipo-pet/mandiali/11556/d8ef8da7a074926507a044adcfac692a.jpg"/>
         </CardItem>
         <CardItem>
-            <img src="https://static3.tcdn.com.br/img/img_prod/636855/coleira_peitoral_canil_xadrez_com_gravata_reforcado_caes_peq_10177_1_20200420114603.jpg"/>
+            <img src="https://a-static.mlcdn.com.br/1500x1500/kit-mordedor-pet-10-brinquedos-de-vinil-para-caes-e-cachorro-jau-home-pet/jaupesca/kitpet10/436ebcd5bb682b81e781c0bb2191954c.jpg"/>
         </CardItem>
         <CardItem>
-            <img src="https://static3.tcdn.com.br/img/img_prod/636855/coleira_peitoral_canil_xadrez_com_gravata_reforcado_caes_peq_10177_1_20200420114603.jpg"/>
+            <img src="https://a-static.mlcdn.com.br/1500x1500/kit-mordedor-pet-10-brinquedos-de-vinil-para-caes-e-cachorro-jau-home-pet/jaupesca/kitpet10/436ebcd5bb682b81e781c0bb2191954c.jpg"/>
         </CardItem>
         <CardItem>
-            <img src="https://static3.tcdn.com.br/img/img_prod/636855/coleira_peitoral_canil_xadrez_com_gravata_reforcado_caes_peq_10177_1_20200420114603.jpg"/>
+            <img src="https://a-static.mlcdn.com.br/1500x1500/kit-mordedor-pet-10-brinquedos-de-vinil-para-caes-e-cachorro-jau-home-pet/jaupesca/kitpet10/436ebcd5bb682b81e781c0bb2191954c.jpg"/>
         </CardItem>
-        <CardItem>
-            <img src="https://static3.tcdn.com.br/img/img_prod/636855/coleira_peitoral_canil_xadrez_com_gravata_reforcado_caes_peq_10177_1_20200420114603.jpg"/>
-        </CardItem><CardItem>
-            <img src="https://static3.tcdn.com.br/img/img_prod/636855/coleira_peitoral_canil_xadrez_com_gravata_reforcado_caes_peq_10177_1_20200420114603.jpg"/>
-        </CardItem>
+    
         <GhostFooter/>
         </ContainerItem>
     </ContainerFelino>
