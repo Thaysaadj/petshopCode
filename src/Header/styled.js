@@ -8,16 +8,36 @@ export const ContainerHeader = styled.div`
     background-color: ${projectColors.primaty};
     color: #fff;
     height: 5vh;
+    width: 100%;
     font-size: 0.5rem;
     padding-left:20px;
     padding-right: 20px;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    box-sizing: border-box;
 
     button{
         background-color: transparent;
         border: 1px solid transparent;
     }
+
+    ion-icon{
+        font-size: 1.5rem;
+        color: #fff;
+    }
+`
+
+export const ContainerIcon = styled.div`
+    width:350px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    box-sizing: border-box;
     
+    ion-icon{
+        padding: 5px;
+        font-size: 1.5rem;
+    }
+
 `
 export const ContainerFooter = styled.div `
     display: flex;
@@ -29,6 +49,17 @@ export const ContainerFooter = styled.div `
     background-color: ${projectColors.primaty};
     height: 100px;
     position: fixed;
-    bottom: 0;
-    
+    bottom: 0;  
+    box-shadow: rgba(0, 0, 0, 0.35) 0px -50px 36px -28px inset;
+    box-sizing: border-box;
+`
+export const Footer = styled.div `
+   
+   ion-icon{
+       font-size: 2rem;
+       color: #fff;;
+       margin: 10px;
+       
+   }
+
 `

@@ -1,4 +1,3 @@
 export const projectColors = {
-    primaty: "#54a494",
-    secondary: "red"
+    primaty: "#54a494"
 }

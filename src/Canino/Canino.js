@@ -3,7 +3,7 @@ import { ContainerCanino, ContainerItem, CardItem, GhostFooter} from "./styled"
 export const Canino = () => {
     return(
         <ContainerCanino>
-            <h1>Items para Cães au au</h1>
+            <h1>Itens para Cães</h1>
             <ContainerItem>
             <CardItem>
                 <img src="https://th.bing.com/th/id/OIP.vu8F-kc5Vhc8fJl5WAAZbQHaHa?pid=ImgDet&w=640&h=640&rs=1"/>
