@@ -33,6 +33,11 @@ export const CardItem = styled.div `
         width: 100%;
        
     }
+
+    :hover{
+        transform: scale(1.1);
+        transition: 0.4s;
+    }
 `
 
 export const GhostFooter = styled.div `

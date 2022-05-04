@@ -35,7 +35,11 @@ export const CardItem = styled.div `
 
     img{
         width: 100%;
-       
+    }
+
+    :hover{
+        transform: scale(1.1);
+        transition: 0.4s;
     }
 `
 
