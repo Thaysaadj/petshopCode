@@ -6,9 +6,9 @@ export const ContainerFelino = styled.div `
     flex-direction: column;
     width: 100%;
     height: 100%;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     background-color: aliceblue;
     box-sizing: border-box;
+    font-family: 'Indie Flower', cursive;
 
 `
 export const ContainerItem = styled.div `

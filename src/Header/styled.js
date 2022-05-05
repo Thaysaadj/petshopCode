@@ -12,7 +12,7 @@ export const ContainerHeader = styled.div`
     font-size: 0.5rem;
     padding-left:20px;
     padding-right: 20px;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family: 'Indie Flower', cursive;
     box-sizing: border-box;
 
     button{
@@ -24,6 +24,14 @@ export const ContainerHeader = styled.div`
         font-size: 1.5rem;
         color: #fff;
     }
+
+    @media (max-width: 400px){
+        display: flex;
+        justify-content: center;
+        background-color: red;
+
+    }
+
 `
 
 export const ContainerIcon = styled.div`
@@ -54,7 +62,8 @@ export const ContainerFooter = styled.div `
     box-sizing: border-box;
 `
 export const Footer = styled.div `
-   
+   box-sizing: border-box;
+
    ion-icon{
        font-size: 2rem;
        color: #fff;;
