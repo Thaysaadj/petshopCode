@@ -40,6 +40,8 @@ export const CardItem = styled.div `
     }
 `
 
+
+
 export const GhostFooter = styled.div `
     width: 100%;
     height: 110px;
