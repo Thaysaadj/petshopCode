@@ -11,6 +11,8 @@ import DialogActions from "@mui/material/DialogActions";
 import DialogContent from "@mui/material/DialogContent";
 import DialogContentText from "@mui/material/DialogContentText";
 import DialogTitle from "@mui/material/DialogTitle";
+import styles from "./styles.css"
+
 
 export const Canino = () => {
   const [open, setOpen] = useState(false);
@@ -28,6 +30,15 @@ export const Canino = () => {
       <ContainerCanino>
         <h1>Itens para Cães</h1>
         <ContainerItem>
+        <CardItem onClick={handleClickOpen}>
+            <img src="https://th.bing.com/th/id/OIP.vu8F-kc5Vhc8fJl5WAAZbQHaHa?pid=ImgDet&w=640&h=640&rs=1" />
+          </CardItem><CardItem onClick={handleClickOpen}>
+            <img src="https://th.bing.com/th/id/OIP.vu8F-kc5Vhc8fJl5WAAZbQHaHa?pid=ImgDet&w=640&h=640&rs=1" />
+          </CardItem><CardItem onClick={handleClickOpen}>
+            <img src="https://th.bing.com/th/id/OIP.vu8F-kc5Vhc8fJl5WAAZbQHaHa?pid=ImgDet&w=640&h=640&rs=1" />
+          </CardItem><CardItem onClick={handleClickOpen}>
+            <img src="https://th.bing.com/th/id/OIP.vu8F-kc5Vhc8fJl5WAAZbQHaHa?pid=ImgDet&w=640&h=640&rs=1" />
+          </CardItem>
           <CardItem onClick={handleClickOpen}>
             <img src="https://th.bing.com/th/id/OIP.vu8F-kc5Vhc8fJl5WAAZbQHaHa?pid=ImgDet&w=640&h=640&rs=1" />
           </CardItem>
@@ -46,12 +57,7 @@ export const Canino = () => {
           <CardItem onClick={handleClickOpen}>
             <img src="https://static3.tcdn.com.br/img/img_prod/636855/coleira_peitoral_canil_xadrez_com_gravata_reforcado_caes_peq_10177_1_20200420114603.jpg" />
           </CardItem>
-          <CardItem onClick={handleClickOpen}>
-            <img src="https://static3.tcdn.com.br/img/img_prod/636855/coleira_peitoral_canil_xadrez_com_gravata_reforcado_caes_peq_10177_1_20200420114603.jpg" />
-          </CardItem>
-          <CardItem onClick={handleClickOpen}>
-            <img src="https://static3.tcdn.com.br/img/img_prod/636855/coleira_peitoral_canil_xadrez_com_gravata_reforcado_caes_peq_10177_1_20200420114603.jpg" />
-          </CardItem>
+          
           <GhostFooter />
         </ContainerItem>
       </ContainerCanino>
@@ -64,6 +70,7 @@ export const Canino = () => {
         <DialogTitle id="alert-dialog-title">{"SCIENCE DIET"}</DialogTitle>
         <DialogContent>
           <DialogContentText id="alert-dialog-description">
+            <img src="https://th.bing.com/th/id/OIP.vu8F-kc5Vhc8fJl5WAAZbQHaHa?pid=ImgDet&w=640&h=640&rs=1"/>
             <h3>Benefícios</h3>
             <p>
               Seus grãos mini bits facilita a apreensão e mastigação dos pets e
