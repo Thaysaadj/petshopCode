@@ -5,23 +5,137 @@ import {
   GhostFooter,
 } from "./styled";
 import React, { useState } from "react";
-import Button from "@mui/material/Button";
-import Dialog from "@mui/material/Dialog";
-import DialogActions from "@mui/material/DialogActions";
-import DialogContent from "@mui/material/DialogContent";
-import DialogContentText from "@mui/material/DialogContentText";
-import DialogTitle from "@mui/material/DialogTitle";
-import styles from "./styles.css"
+import { Modal } from "../components/modal/Modal";
 
 
 export const Canino = () => {
   const [open, setOpen] = useState(false);
+  const [dataSelected, setDataSelected] = useState(null)
 
-  const handleClickOpen = () => {
+  const data = [
+    {
+      title: "Ração Seca Balance",
+      text: " Frango e Vegetais para Gatos Adultos 10,1kkg",
+      subtitle: "Benefícios",
+      price: 138,
+      linkUrl: "https://static.petz.com.br/fotos/1614090145261.jpg",
+      gatinho:"https://static.petz.com.br/fotos/1614090145261.jpg",
+      list:[" Zero corante e aromatizantes artificiais, com um mix balanceado de frango e vegetais;",
+      "Ômega 3 e 6 que ajuda a manter os pelos e pele mais saudável e macios;",
+      "Trato urinário com controle de minerais, que ajuda a manter o bem-estar do seu pet;",
+      "Proteína de alta qualidade, que auxiliam em músculos fortes e saudáveis;",
+      "Possuí algas marinhas que ajudam na redução de inflamações, além das fibras que controlam as bolas de pelo;",
+      "Alimento completo e 100% balanceado para gatos adultos;",
+      "Embalagem com sistema de zip abre e fecha, que preserva a qualidade do alimento."]
+    },
+    {
+      title: "Nutrilus",
+      text: "Pro - Adultos Carne 10,1kkg",
+      subtitle: "Benefícios",
+      price: 200,
+      linkUrl: "https://static.petz.com.br/fotos/1627571639069.jpg",
+      gatinho:"https://static.petz.com.br/fotos/1627571639069.jpg",
+      list:["Intestino saudável", " Pelagem mais macia e brilhante", "Desenvolvida por veterinários a partir de ingredientes selecionados"]
+    },
+    {
+      title: "Golden",
+      text: "Premium - Adultos Castrados, Salmão 10,1kkg",
+      subtitle: "Benefícios",
+      price: 180,
+      linkUrl: "https://static.petz.com.br/fotos/1619705888895.jpg",
+      gatinho:"https://static.petz.com.br/fotos/1619705888895.jpg",
+      list:["Sabor inigualável: máxima satisfação para o paladar;",
+      "Trato urinário saudável: minerais balanceados e controle do pH urinário;",
+      "Intestino saudável: combinação de ingredientes de alta digestibilidade e prebióticos;",
+      "Redução do odor das fezes: seleção de ingredientes especiais que auxiliam na redução do odor das fezes."]
+    },
+    
+    {
+      title: "Petisco WOW ",
+      text: "Pet Food Gourmet Frango Crocante para Gatos 50g",
+      subtitle: "Benefícios",
+      price: 35,
+      linkUrl: "https://static.petz.com.br/fotos/1632748120656.jpg",
+      gatinho:"https://static.petz.com.br/fotos/1632748120656.jpg",
+      list:["Para gatos;", "100% natural",
+      "Crocante e saboroso;",
+      "Livre de conservantes e aditivos químicos"]
+    },
+    {
+      title: "Gran Plus",
+      text: "Adulto - Frango & Carne 10,1kg ",
+      subtitle: "Benefícios",
+      price: 100,
+      linkUrl: "https://static.petz.com.br/fotos/1593439116952.jpg",
+      gatinho: "https://static.petz.com.br/fotos/1593439116952.jpg",
+      list:["Não possui corantes e aromatizantes artificiais;", "Proporciona equilibradamente ômega 3 e 6,", "Possui vitaminas e nutrientes para o seu pet."]
+    },
+    {
+      title: "Golden",
+      text: "Premium - Adultos Castrados, Salmão 10,1kkg",
+      subtitle: "Benefícios",
+      price: 180,
+      linkUrl: "https://static.petz.com.br/fotos/1593439116952.jpg",
+      gatinho:"https://static.petz.com.br/fotos/1593439116952.jpg",
+      list:["Sabor inigualável: máxima satisfação para o paladar;",
+      "Trato urinário saudável: minerais balanceados e controle do pH urinário;",
+      "Intestino saudável: combinação de ingredientes de alta digestibilidade e prebióticos;",
+      "Redução do odor das fezes: seleção de ingredientes especiais que auxiliam na redução do odor das fezes."]
+    },
+    {
+      title: "Gran Plus",
+      text: "Adulto - Frango & Carne 10,1kg ",
+      subtitle: "Benefícios",
+      price: 100,
+      linkUrl: "https://static.petz.com.br/fotos/1619705888895.jpg",
+      gatinho: "https://static.petz.com.br/fotos/1619705888895.jpg",
+      list:["Não possui corantes e aromatizantes artificiais;", "Proporciona equilibradamente ômega 3 e 6,", "Possui vitaminas e nutrientes para o seu pet."]
+    },
+    {
+      title: "Nutrilus",
+      text: "Pro - Adultos Carne 10,1kkg",
+      subtitle: "Benefícios",
+      price: 200,
+      linkUrl: "https://static.petz.com.br/fotos/1632748120656.jpg",
+      gatinho:"https://static.petz.com.br/fotos/1632748120656.jpg",
+      list:["Intestino saudável", " Pelagem mais macia e brilhante", "Desenvolvida por veterinários a partir de ingredientes selecionados"]
+    },
+    
+    {
+      title:"Petisco WOW ",
+      text: "Pet Food Gourmet Frango Crocante para Gatos 50g",
+      subtitle: "Benefícios",
+      price: 35,
+      linkUrl: "https://static.petz.com.br/fotos/1627571639069.jpg",
+      gatinho:"https://static.petz.com.br/fotos/1627571639069.jpg",
+      list:["Para gatos;", "100% natural",
+      "Crocante e saboroso;",
+      "Livre de conservantes e aditivos químicos"]
+    },
+    {
+      title: "Ração Seca Balance",
+      text: " Frango e Vegetais para Gatos Adultos 10,1kkg",
+      subtitle: "Benefícios",
+      price: 138,
+      linkUrl: "https://static.petz.com.br/fotos/1614090145261.jpg",
+      gatinho:"https://static.petz.com.br/fotos/1614090145261.jpg",
+      list:[" Zero corante e aromatizantes artificiais, com um mix balanceado de frango e vegetais;",
+      "Ômega 3 e 6 que ajuda a manter os pelos e pele mais saudável e macios;",
+      "Trato urinário com controle de minerais, que ajuda a manter o bem-estar do seu pet;",
+      "Proteína de alta qualidade, que auxiliam em músculos fortes e saudáveis;",
+      "Possuí algas marinhas que ajudam na redução de inflamações, além das fibras que controlam as bolas de pelo;",
+      "Alimento completo e 100% balanceado para gatos adultos;",
+      "Embalagem com sistema de zip abre e fecha, que preserva a qualidade do alimento."]
+    },
+  ];
+
+  const handleClickOpen = (item) => {
+    setDataSelected(item)
     setOpen(true);
   };
 
-  const handleClose = () => {
+  const handleClose = (item) => {
+    setDataSelected(item)
     setOpen(false);
   };
 
@@ -30,62 +144,17 @@ export const Canino = () => {
       <ContainerCanino>
         <h1>Itens para Cães</h1>
         <ContainerItem>
-        <CardItem onClick={handleClickOpen}>
-            <img src="https://th.bing.com/th/id/OIP.vu8F-kc5Vhc8fJl5WAAZbQHaHa?pid=ImgDet&w=640&h=640&rs=1" />
-          </CardItem><CardItem onClick={handleClickOpen}>
-            <img src="https://th.bing.com/th/id/OIP.vu8F-kc5Vhc8fJl5WAAZbQHaHa?pid=ImgDet&w=640&h=640&rs=1" />
-          </CardItem><CardItem onClick={handleClickOpen}>
-            <img src="https://th.bing.com/th/id/OIP.vu8F-kc5Vhc8fJl5WAAZbQHaHa?pid=ImgDet&w=640&h=640&rs=1" />
-          </CardItem><CardItem onClick={handleClickOpen}>
-            <img src="https://th.bing.com/th/id/OIP.vu8F-kc5Vhc8fJl5WAAZbQHaHa?pid=ImgDet&w=640&h=640&rs=1" />
-          </CardItem>
-          <CardItem onClick={handleClickOpen}>
-            <img src="https://th.bing.com/th/id/OIP.vu8F-kc5Vhc8fJl5WAAZbQHaHa?pid=ImgDet&w=640&h=640&rs=1" />
-          </CardItem>
-          <CardItem onClick={handleClickOpen}>
-            <img src="https://www.petshopagroaves.com.br/uploads/petshopagroaves/produtos_imagens/Racao-Hills-Canino-Pedacos-Pequenos-1Kg16116749561394043886.jpg" />
-          </CardItem>
-          <CardItem onClick={handleClickOpen}>
-            <img src="https://a-static.mlcdn.com.br/1500x1500/kit-mordedor-pet-10-brinquedos-de-vinil-para-caes-e-cachorro-jau-home-pet/jaupesca/kitpet10/436ebcd5bb682b81e781c0bb2191954c.jpg" />
-          </CardItem>
-          <CardItem onClick={handleClickOpen}>
-            <img src="https://static3.tcdn.com.br/img/img_prod/636855/coleira_peitoral_canil_xadrez_com_gravata_reforcado_caes_peq_10177_1_20200420114603.jpg" />
-          </CardItem>
-          <CardItem onClick={handleClickOpen}>
-            <img src="https://static3.tcdn.com.br/img/img_prod/636855/coleira_peitoral_canil_xadrez_com_gravata_reforcado_caes_peq_10177_1_20200420114603.jpg" />
-          </CardItem>
-          <CardItem onClick={handleClickOpen}>
-            <img src="https://static3.tcdn.com.br/img/img_prod/636855/coleira_peitoral_canil_xadrez_com_gravata_reforcado_caes_peq_10177_1_20200420114603.jpg" />
-          </CardItem>
-          
+        {data.map((item) => (
+            <>
+              <CardItem onClick={() => handleClickOpen(item)}>
+                <img src={item.gatinho}/>
+              </CardItem>
+            </>
+          ))}
+          <Modal open={open} handleClose={handleClose} title={dataSelected?.title} subtitle={dataSelected?.subtitle} price={dataSelected?.price} text={dataSelected?.text} linkUrl={dataSelected?.linkUrl} list={dataSelected?.list}/>
           <GhostFooter />
         </ContainerItem>
       </ContainerCanino>
-      <Dialog
-        open={open}
-        onClose={handleClose}
-        aria-labelledby="alert-dialog-title"
-        aria-describedby="alert-dialog-description"
-      >
-        <DialogTitle id="alert-dialog-title">{"SCIENCE DIET"}</DialogTitle>
-        <DialogContent>
-          <DialogContentText id="alert-dialog-description">
-            <img src="https://th.bing.com/th/id/OIP.vu8F-kc5Vhc8fJl5WAAZbQHaHa?pid=ImgDet&w=640&h=640&rs=1"/>
-            <h3>Benefícios</h3>
-            <p>
-              Seus grãos mini bits facilita a apreensão e mastigação dos pets e
-              ainda possui outros benefícios, como:<br/>
-              - Não possui corantes e
-              aromatizantes artificiais;<br/>- Proporciona equilibradamente ômega 3
-              e 6,<br/> - Possui vitaminas e nutrientes para o seu pet.
-            </p>
-            <h4>Valor R$ 95,00</h4>
-          </DialogContentText>
-        </DialogContent>
-        <DialogActions>
-          <Button onClick={handleClose}>Fechar</Button>
-        </DialogActions>
-      </Dialog>
     </>
   );
 };
